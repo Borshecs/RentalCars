@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44D1F3A2-95D3-40B0-A7A4-F38363B60DAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RentalCost</RootNamespace>
+    <AssemblyName>RentalCost</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="check_user.cs" />
+    <Compile Include="DateBaseConnect.cs" />
+    <Compile Include="EnterDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterDB.Designer.cs">
+      <DependentUpon>EnterDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB.Designer.cs">
+      <DependentUpon>DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_info.Designer.cs">
+      <DependentUpon>Add_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDataDis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataDis.Designer.cs">
+      <DependentUpon>AddDataDis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDataFines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataFines.Designer.cs">
+      <DependentUpon>AddDataFines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Veh_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Veh_add.Designer.cs">
+      <DependentUpon>Veh_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rentcostDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rentcostDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rentcostDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDataDis.resx">
+      <DependentUpon>AddDataDis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDataFines.resx">
+      <DependentUpon>AddDataFines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_info.resx">
+      <DependentUpon>Add_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB.resx">
+      <DependentUpon>DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterDB.resx">
+      <DependentUpon>EnterDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Veh_add.resx">
+      <DependentUpon>Veh_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="rentcostDataSet.xsc">
+      <DependentUpon>rentcostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet.xss">
+      <DependentUpon>rentcostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet1.xsc">
+      <DependentUpon>rentcostDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet1.xss">
+      <DependentUpon>rentcostDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet10.xsc">
+      <DependentUpon>rentcostDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet10.xss">
+      <DependentUpon>rentcostDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet11.xsc">
+      <DependentUpon>rentcostDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet11.xss">
+      <DependentUpon>rentcostDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet12.xsc">
+      <DependentUpon>rentcostDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet12.xss">
+      <DependentUpon>rentcostDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet13.xsc">
+      <DependentUpon>rentcostDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet13.xss">
+      <DependentUpon>rentcostDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet14.xsc">
+      <DependentUpon>rentcostDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet14.xss">
+      <DependentUpon>rentcostDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet15.xsc">
+      <DependentUpon>rentcostDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet15.xss">
+      <DependentUpon>rentcostDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet16.xsc">
+      <DependentUpon>rentcostDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet16.xss">
+      <DependentUpon>rentcostDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet17.xsc">
+      <DependentUpon>rentcostDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet17.xss">
+      <DependentUpon>rentcostDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet18.xsc">
+      <DependentUpon>rentcostDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet18.xss">
+      <DependentUpon>rentcostDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet19.xsc">
+      <DependentUpon>rentcostDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet19.xss">
+      <DependentUpon>rentcostDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet2.xsc">
+      <DependentUpon>rentcostDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet2.xss">
+      <DependentUpon>rentcostDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet20.xsc">
+      <DependentUpon>rentcostDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet20.xss">
+      <DependentUpon>rentcostDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet3.xsc">
+      <DependentUpon>rentcostDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet3.xss">
+      <DependentUpon>rentcostDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet4.xsc">
+      <DependentUpon>rentcostDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet4.xss">
+      <DependentUpon>rentcostDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet5.xsc">
+      <DependentUpon>rentcostDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet5.xss">
+      <DependentUpon>rentcostDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet6.xsc">
+      <DependentUpon>rentcostDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet6.xss">
+      <DependentUpon>rentcostDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet7.xsc">
+      <DependentUpon>rentcostDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet7.xss">
+      <DependentUpon>rentcostDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet8.xsc">
+      <DependentUpon>rentcostDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet8.xss">
+      <DependentUpon>rentcostDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet9.xsc">
+      <DependentUpon>rentcostDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="rentcostDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rentcostDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rentcostDataSet9.xss">
+      <DependentUpon>rentcostDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
